@@ -274,3 +274,111 @@ Error occurred at line 4117 in Function <code>handle_error</code>. Error message
 #8 /workspaces/Assignment4/.wordpress/wp-admin/admin-ajax.php(192): do_action('wp_ajax_delete-...')
 #9 {main}</pre>
  for query DROP TABLE IF EXISTS wp_blc_linkdata, wp_blc_postdata, wp_blc_instances, wp_blc_links, wp_blc_synch, wp_blc_filters made by do_action('wp_ajax_delete-plugin'), WP_Hook->do_action, WP_Hook->apply_filters, wp_ajax_delete_plugin, delete_plugins, uninstall_plugin, include_once('/plugins/broken-link-checker/uninstall.php'), WP_SQLite_DB->query, WP_SQLite_DB->print_error
+[31-Mar-2025 23:03:26 UTC] PHP Fatal error:  Out of memory (allocated 105250816) (tried to allocate 28672 bytes) in /workspaces/Assignment4/.wordpress/wp-includes/class-wp-image-editor-gd.php on line 116
+[31-Mar-2025 23:03:26 UTC] PHP Fatal error:  Out of memory (allocated 105250816) (tried to allocate 65536 bytes) in /workspaces/Assignment4/.wordpress/wp-includes/class-wp-error.php on line 196
+[31-Mar-2025 23:03:27 UTC] PHP Warning:  require_once(/workspaces/Assignment4/.wordpress/wp-includes/class-wp-image-editor-gd.php): Failed to open stream: No such file or directory in /workspaces/Assignment4/.wordpress/wp-includes/media.php on line 4230
+[31-Mar-2025 23:03:27 UTC] PHP Fatal error:  Uncaught Error: Failed opening required '/workspaces/Assignment4/.wordpress/wp-includes/class-wp-image-editor-gd.php' (include_path='.:') in /workspaces/Assignment4/.wordpress/wp-includes/media.php:4230
+Stack trace:
+#0 /workspaces/Assignment4/.wordpress/wp-includes/media.php(4189): _wp_image_editor_choose(Array)
+#1 /workspaces/Assignment4/.wordpress/wp-admin/includes/image.php(485): wp_get_image_editor('/workspaces/Ass...')
+#2 /workspaces/Assignment4/.wordpress/wp-admin/includes/image.php(181): _wp_make_subsizes(Array, '/workspaces/Ass...', Array, 85)
+#3 /workspaces/Assignment4/.wordpress/wp-includes/rest-api/endpoints/class-wp-rest-attachments-controller.php(463): wp_update_image_subsizes(85)
+#4 /workspaces/Assignment4/.wordpress/wp-includes/rest-api/class-wp-rest-server.php(1292): WP_REST_Attachments_Controller->post_process_item(Object(WP_REST_Request))
+#5 /workspaces/Assignment4/.wordpress/wp-includes/rest-api/class-wp-rest-server.php(1125): WP_REST_Server->respond_to_request(Object(WP_REST_Request), '/wp/v2/media/(?...', Array, NULL)
+#6 /workspaces/Assignment4/.wordpress/wp-includes/rest-api/class-wp-rest-server.php(439): WP_REST_Server->dispatch(Object(WP_REST_Request))
+#7 /workspaces/Assignment4/.wordpress/wp-includes/rest-api.php(449): WP_REST_Server->serve_request('/wp/v2/media/85...')
+#8 /workspaces/Assignment4/.wordpress/wp-includes/class-wp-hook.php(324): rest_api_loaded(Object(WP))
+#9 /workspaces/Assignment4/.wordpress/wp-includes/class-wp-hook.php(348): WP_Hook->apply_filters('', Array)
+#10 /workspaces/Assignment4/.wordpress/wp-includes/plugin.php(565): WP_Hook->do_action(Array)
+#11 /workspaces/Assignment4/.wordpress/wp-includes/class-wp.php(418): do_action_ref_array('parse_request', Array)
+#12 /workspaces/Assignment4/.wordpress/wp-includes/class-wp.php(813): WP->parse_request('')
+#13 /workspaces/Assignment4/.wordpress/wp-includes/functions.php(1336): WP->main('')
+#14 /workspaces/Assignment4/.wordpress/wp-blog-header.php(16): wp()
+#15 /workspaces/Assignment4/.wordpress/index.php(17): require('/workspaces/Ass...')
+#16 {main}
+  thrown in /workspaces/Assignment4/.wordpress/wp-includes/media.php on line 4230
+[31-Mar-2025 23:03:27 UTC] PHP Warning:  require_once(/workspaces/Assignment4/.wordpress/wp-includes/class-wp-image-editor-gd.php): Failed to open stream: No such file or directory in /workspaces/Assignment4/.wordpress/wp-includes/media.php on line 4230
+[31-Mar-2025 23:03:27 UTC] PHP Fatal error:  Uncaught Error: Failed opening required '/workspaces/Assignment4/.wordpress/wp-includes/class-wp-image-editor-gd.php' (include_path='.:') in /workspaces/Assignment4/.wordpress/wp-includes/media.php:4230
+Stack trace:
+#0 /workspaces/Assignment4/.wordpress/wp-includes/media.php(4189): _wp_image_editor_choose(Array)
+#1 /workspaces/Assignment4/.wordpress/wp-admin/includes/image.php(485): wp_get_image_editor('/workspaces/Ass...')
+#2 /workspaces/Assignment4/.wordpress/wp-admin/includes/image.php(181): _wp_make_subsizes(Array, '/workspaces/Ass...', Array, 85)
+#3 /workspaces/Assignment4/.wordpress/wp-includes/rest-api/endpoints/class-wp-rest-attachments-controller.php(463): wp_update_image_subsizes(85)
+#4 /workspaces/Assignment4/.wordpress/wp-includes/rest-api/class-wp-rest-server.php(1292): WP_REST_Attachments_Controller->post_process_item(Object(WP_REST_Request))
+#5 /workspaces/Assignment4/.wordpress/wp-includes/rest-api/class-wp-rest-server.php(1125): WP_REST_Server->respond_to_request(Object(WP_REST_Request), '/wp/v2/media/(?...', Array, NULL)
+#6 /workspaces/Assignment4/.wordpress/wp-includes/rest-api/class-wp-rest-server.php(439): WP_REST_Server->dispatch(Object(WP_REST_Request))
+#7 /workspaces/Assignment4/.wordpress/wp-includes/rest-api.php(449): WP_REST_Server->serve_request('/wp/v2/media/85...')
+#8 /workspaces/Assignment4/.wordpress/wp-includes/class-wp-hook.php(324): rest_api_loaded(Object(WP))
+#9 /workspaces/Assignment4/.wordpress/wp-includes/class-wp-hook.php(348): WP_Hook->apply_filters('', Array)
+#10 /workspaces/Assignment4/.wordpress/wp-includes/plugin.php(565): WP_Hook->do_action(Array)
+#11 /workspaces/Assignment4/.wordpress/wp-includes/class-wp.php(418): do_action_ref_array('parse_request', Array)
+#12 /workspaces/Assignment4/.wordpress/wp-includes/class-wp.php(813): WP->parse_request('')
+#13 /workspaces/Assignment4/.wordpress/wp-includes/functions.php(1336): WP->main('')
+#14 /workspaces/Assignment4/.wordpress/wp-blog-header.php(16): wp()
+#15 /workspaces/Assignment4/.wordpress/index.php(17): require('/workspaces/Ass...')
+#16 {main}
+  thrown in /workspaces/Assignment4/.wordpress/wp-includes/media.php on line 4230
+[31-Mar-2025 23:03:27 UTC] PHP Warning:  require_once(/workspaces/Assignment4/.wordpress/wp-includes/class-wp-image-editor-gd.php): Failed to open stream: No such file or directory in /workspaces/Assignment4/.wordpress/wp-includes/media.php on line 4230
+[31-Mar-2025 23:03:27 UTC] PHP Fatal error:  Uncaught Error: Failed opening required '/workspaces/Assignment4/.wordpress/wp-includes/class-wp-image-editor-gd.php' (include_path='.:') in /workspaces/Assignment4/.wordpress/wp-includes/media.php:4230
+Stack trace:
+#0 /workspaces/Assignment4/.wordpress/wp-includes/media.php(4189): _wp_image_editor_choose(Array)
+#1 /workspaces/Assignment4/.wordpress/wp-admin/includes/image.php(485): wp_get_image_editor('/workspaces/Ass...')
+#2 /workspaces/Assignment4/.wordpress/wp-admin/includes/image.php(181): _wp_make_subsizes(Array, '/workspaces/Ass...', Array, 85)
+#3 /workspaces/Assignment4/.wordpress/wp-includes/rest-api/endpoints/class-wp-rest-attachments-controller.php(463): wp_update_image_subsizes(85)
+#4 /workspaces/Assignment4/.wordpress/wp-includes/rest-api/class-wp-rest-server.php(1292): WP_REST_Attachments_Controller->post_process_item(Object(WP_REST_Request))
+#5 /workspaces/Assignment4/.wordpress/wp-includes/rest-api/class-wp-rest-server.php(1125): WP_REST_Server->respond_to_request(Object(WP_REST_Request), '/wp/v2/media/(?...', Array, NULL)
+#6 /workspaces/Assignment4/.wordpress/wp-includes/rest-api/class-wp-rest-server.php(439): WP_REST_Server->dispatch(Object(WP_REST_Request))
+#7 /workspaces/Assignment4/.wordpress/wp-includes/rest-api.php(449): WP_REST_Server->serve_request('/wp/v2/media/85...')
+#8 /workspaces/Assignment4/.wordpress/wp-includes/class-wp-hook.php(324): rest_api_loaded(Object(WP))
+#9 /workspaces/Assignment4/.wordpress/wp-includes/class-wp-hook.php(348): WP_Hook->apply_filters('', Array)
+#10 /workspaces/Assignment4/.wordpress/wp-includes/plugin.php(565): WP_Hook->do_action(Array)
+#11 /workspaces/Assignment4/.wordpress/wp-includes/class-wp.php(418): do_action_ref_array('parse_request', Array)
+#12 /workspaces/Assignment4/.wordpress/wp-includes/class-wp.php(813): WP->parse_request('')
+#13 /workspaces/Assignment4/.wordpress/wp-includes/functions.php(1336): WP->main('')
+#14 /workspaces/Assignment4/.wordpress/wp-blog-header.php(16): wp()
+#15 /workspaces/Assignment4/.wordpress/index.php(17): require('/workspaces/Ass...')
+#16 {main}
+  thrown in /workspaces/Assignment4/.wordpress/wp-includes/media.php on line 4230
+[31-Mar-2025 23:03:27 UTC] PHP Warning:  require_once(/workspaces/Assignment4/.wordpress/wp-includes/class-wp-image-editor-gd.php): Failed to open stream: No such file or directory in /workspaces/Assignment4/.wordpress/wp-includes/media.php on line 4230
+[31-Mar-2025 23:03:27 UTC] PHP Fatal error:  Uncaught Error: Failed opening required '/workspaces/Assignment4/.wordpress/wp-includes/class-wp-image-editor-gd.php' (include_path='.:') in /workspaces/Assignment4/.wordpress/wp-includes/media.php:4230
+Stack trace:
+#0 /workspaces/Assignment4/.wordpress/wp-includes/media.php(4189): _wp_image_editor_choose(Array)
+#1 /workspaces/Assignment4/.wordpress/wp-admin/includes/image.php(485): wp_get_image_editor('/workspaces/Ass...')
+#2 /workspaces/Assignment4/.wordpress/wp-admin/includes/image.php(181): _wp_make_subsizes(Array, '/workspaces/Ass...', Array, 85)
+#3 /workspaces/Assignment4/.wordpress/wp-includes/rest-api/endpoints/class-wp-rest-attachments-controller.php(463): wp_update_image_subsizes(85)
+#4 /workspaces/Assignment4/.wordpress/wp-includes/rest-api/class-wp-rest-server.php(1292): WP_REST_Attachments_Controller->post_process_item(Object(WP_REST_Request))
+#5 /workspaces/Assignment4/.wordpress/wp-includes/rest-api/class-wp-rest-server.php(1125): WP_REST_Server->respond_to_request(Object(WP_REST_Request), '/wp/v2/media/(?...', Array, NULL)
+#6 /workspaces/Assignment4/.wordpress/wp-includes/rest-api/class-wp-rest-server.php(439): WP_REST_Server->dispatch(Object(WP_REST_Request))
+#7 /workspaces/Assignment4/.wordpress/wp-includes/rest-api.php(449): WP_REST_Server->serve_request('/wp/v2/media/85...')
+#8 /workspaces/Assignment4/.wordpress/wp-includes/class-wp-hook.php(324): rest_api_loaded(Object(WP))
+#9 /workspaces/Assignment4/.wordpress/wp-includes/class-wp-hook.php(348): WP_Hook->apply_filters('', Array)
+#10 /workspaces/Assignment4/.wordpress/wp-includes/plugin.php(565): WP_Hook->do_action(Array)
+#11 /workspaces/Assignment4/.wordpress/wp-includes/class-wp.php(418): do_action_ref_array('parse_request', Array)
+#12 /workspaces/Assignment4/.wordpress/wp-includes/class-wp.php(813): WP->parse_request('')
+#13 /workspaces/Assignment4/.wordpress/wp-includes/functions.php(1336): WP->main('')
+#14 /workspaces/Assignment4/.wordpress/wp-blog-header.php(16): wp()
+#15 /workspaces/Assignment4/.wordpress/index.php(17): require('/workspaces/Ass...')
+#16 {main}
+  thrown in /workspaces/Assignment4/.wordpress/wp-includes/media.php on line 4230
+[31-Mar-2025 23:03:28 UTC] PHP Warning:  require_once(/workspaces/Assignment4/.wordpress/wp-includes/class-wp-image-editor-gd.php): Failed to open stream: No such file or directory in /workspaces/Assignment4/.wordpress/wp-includes/media.php on line 4230
+[31-Mar-2025 23:03:28 UTC] PHP Fatal error:  Uncaught Error: Failed opening required '/workspaces/Assignment4/.wordpress/wp-includes/class-wp-image-editor-gd.php' (include_path='.:') in /workspaces/Assignment4/.wordpress/wp-includes/media.php:4230
+Stack trace:
+#0 /workspaces/Assignment4/.wordpress/wp-includes/media.php(4189): _wp_image_editor_choose(Array)
+#1 /workspaces/Assignment4/.wordpress/wp-admin/includes/image.php(485): wp_get_image_editor('/workspaces/Ass...')
+#2 /workspaces/Assignment4/.wordpress/wp-admin/includes/image.php(181): _wp_make_subsizes(Array, '/workspaces/Ass...', Array, 85)
+#3 /workspaces/Assignment4/.wordpress/wp-includes/rest-api/endpoints/class-wp-rest-attachments-controller.php(463): wp_update_image_subsizes(85)
+#4 /workspaces/Assignment4/.wordpress/wp-includes/rest-api/class-wp-rest-server.php(1292): WP_REST_Attachments_Controller->post_process_item(Object(WP_REST_Request))
+#5 /workspaces/Assignment4/.wordpress/wp-includes/rest-api/class-wp-rest-server.php(1125): WP_REST_Server->respond_to_request(Object(WP_REST_Request), '/wp/v2/media/(?...', Array, NULL)
+#6 /workspaces/Assignment4/.wordpress/wp-includes/rest-api/class-wp-rest-server.php(439): WP_REST_Server->dispatch(Object(WP_REST_Request))
+#7 /workspaces/Assignment4/.wordpress/wp-includes/rest-api.php(449): WP_REST_Server->serve_request('/wp/v2/media/85...')
+#8 /workspaces/Assignment4/.wordpress/wp-includes/class-wp-hook.php(324): rest_api_loaded(Object(WP))
+#9 /workspaces/Assignment4/.wordpress/wp-includes/class-wp-hook.php(348): WP_Hook->apply_filters('', Array)
+#10 /workspaces/Assignment4/.wordpress/wp-includes/plugin.php(565): WP_Hook->do_action(Array)
+#11 /workspaces/Assignment4/.wordpress/wp-includes/class-wp.php(418): do_action_ref_array('parse_request', Array)
+#12 /workspaces/Assignment4/.wordpress/wp-includes/class-wp.php(813): WP->parse_request('')
+#13 /workspaces/Assignment4/.wordpress/wp-includes/functions.php(1336): WP->main('')
+#14 /workspaces/Assignment4/.wordpress/wp-blog-header.php(16): wp()
+#15 /workspaces/Assignment4/.wordpress/index.php(17): require('/workspaces/Ass...')
+#16 {main}
+  thrown in /workspaces/Assignment4/.wordpress/wp-includes/media.php on line 4230
+[31-Mar-2025 23:03:57 UTC] PHP Fatal error:  Out of memory (allocated 31457280) (tried to allocate 2097152 bytes) in /workspaces/Assignment4/.wordpress/wp-admin/includes/ajax-actions.php on line 4019

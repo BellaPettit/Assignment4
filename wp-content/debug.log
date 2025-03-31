@@ -248,3 +248,29 @@ Error occurred at line 4117 in Function <code>handle_error</code>. Error message
 	      WHERE
 	        instances.container_type NOT IN ('comment', 'post', 'page', 'dummy') OR
 	        instances.parser_type NOT IN ('link', 'image', 'youtube-iframe', 'metadata', 'url_field', 'acf') made by do_action_ref_array('blc_cron_database_maintenance'), WP_Hook->do_action, WP_Hook->apply_filters, wsBrokenLinkChecker->database_maintenance, blc_cleanup_instances, WP_SQLite_DB->query, WP_SQLite_DB->print_error
+[31-Mar-2025 22:32:58 UTC] WordPress database error <div style="clear:both">&nbsp;</div>
+<div class="queries" style="clear:both;margin-bottom:2px;border:red dotted thin;">
+<p>MySQL query:</p>
+<p>DROP TABLE IF EXISTS wp_blc_linkdata, wp_blc_postdata, wp_blc_instances, wp_blc_links, wp_blc_synch, wp_blc_filters</p>
+<p>Queries made or created this session were:</p>
+<ol>
+<li>Executing: BEGIN | (no parameters)</li>
+<li>Executing: DROP TABLE IF EXISTS wp_blc_linkdata, wp_blc_postdata, wp_blc_instances, wp_blc_links, wp_blc_synch, wp_blc_filters | (no parameters)</li>
+<li>Executing: ROLLBACK | (no parameters)</li>
+</ol>
+</div>
+<div style="clear:both;margin-bottom:2px;border:red dotted thin;" class="error_message" style="border-bottom:dotted blue thin;">
+Error occurred at line 4117 in Function <code>handle_error</code>. Error message was: SQLSTATE[HY000]: General error: 1 near ",": syntax error.
+</div>
+<p>Backtrace:</p>
+<pre>#0 /workspaces/Assignment4/.wordpress/wp-content/mu-plugins/sqlite-database-integration/wp-includes/sqlite/class-wp-sqlite-db.php(287): WP_SQLite_Translator->get_error_message()
+#1 /workspaces/Assignment4/.wordpress/wp-content/plugins/broken-link-checker/uninstall.php(24): WP_SQLite_DB->query('DROP TABLE IF E...')
+#2 /workspaces/Assignment4/.wordpress/wp-admin/includes/plugin.php(1314): include_once('/workspaces/Ass...')
+#3 /workspaces/Assignment4/.wordpress/wp-admin/includes/plugin.php(970): uninstall_plugin('broken-link-che...')
+#4 /workspaces/Assignment4/.wordpress/wp-admin/includes/ajax-actions.php(4771): delete_plugins(Array)
+#5 /workspaces/Assignment4/.wordpress/wp-includes/class-wp-hook.php(324): wp_ajax_delete_plugin('')
+#6 /workspaces/Assignment4/.wordpress/wp-includes/class-wp-hook.php(348): WP_Hook->apply_filters('', Array)
+#7 /workspaces/Assignment4/.wordpress/wp-includes/plugin.php(517): WP_Hook->do_action(Array)
+#8 /workspaces/Assignment4/.wordpress/wp-admin/admin-ajax.php(192): do_action('wp_ajax_delete-...')
+#9 {main}</pre>
+ for query DROP TABLE IF EXISTS wp_blc_linkdata, wp_blc_postdata, wp_blc_instances, wp_blc_links, wp_blc_synch, wp_blc_filters made by do_action('wp_ajax_delete-plugin'), WP_Hook->do_action, WP_Hook->apply_filters, wp_ajax_delete_plugin, delete_plugins, uninstall_plugin, include_once('/plugins/broken-link-checker/uninstall.php'), WP_SQLite_DB->query, WP_SQLite_DB->print_error

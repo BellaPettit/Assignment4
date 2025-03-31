@@ -59,3 +59,42 @@ h1, h2, h3, h4, h5, h6, blockquote, caption, figcaption, p {
 .more-link {
 	display: block;
 }
+/* Background and Text Colors */
+body {
+    background-color: #F2E4D5; /* Creamy background */
+    color: #5C4033; /* Dark brown text */
+    font-family: Arial, sans-serif;
+}
+
+/* Headings */
+h1, h2, h3, h4, h5, h6 {
+    color: #5C4033; /* Brown headings */
+}
+
+/* Links */
+a {
+    color: #5C4033; /* Brown links */
+    text-decoration: none;
+}
+
+a:hover {
+    color: #D1B29D; /* Light brown on hover */
+}
+
+/* Buttons */
+button, .button {
+    background-color: #5C4033; /* Brown button */
+    color: #FFFFFF; /* White text on button */
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+}
+
+button:hover, .button:hover {
+    background-color: #D1B29D; /* Light brown on hover */
+}
+
+/* Footer */
+footer {
+    background-color: #5C403
+

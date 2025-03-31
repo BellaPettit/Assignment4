@@ -17,8 +17,8 @@ window._wpemojiSettings = {"baseUrl":"https:\/\/s.w.org\/images\/core\/emoji\/15
 <style id='wp-block-site-title-inline-css'>
 .wp-block-site-title{box-sizing:border-box}.wp-block-site-title :where(a){color:inherit;font-family:inherit;font-size:inherit;font-style:inherit;font-weight:inherit;letter-spacing:inherit;line-height:inherit;text-decoration:inherit}
 </style>
-<style id='wp-block-page-list-inline-css'>
-.wp-block-navigation .wp-block-page-list{align-items:var(--navigation-layout-align,initial);background-color:inherit;display:flex;flex-direction:var(--navigation-layout-direction,initial);flex-wrap:var(--navigation-layout-wrap,wrap);justify-content:var(--navigation-layout-justify,initial)}.wp-block-navigation .wp-block-navigation-item{background-color:inherit}
+<style id='wp-block-navigation-link-inline-css'>
+.wp-block-navigation .wp-block-navigation-item__label{overflow-wrap:break-word}.wp-block-navigation .wp-block-navigation-item__description{display:none}.link-ui-tools{border-top:1px solid #f0f0f0;padding:8px}.link-ui-block-inserter{padding-top:8px}.link-ui-block-inserter__back{margin-left:8px;text-transform:uppercase}
 </style>
 <link rel='stylesheet' id='wp-block-navigation-css' href='/Assignment4/wp-includes/blocks/navigation/style.min.css?ver=6.7.2' media='all' />
 <style id='wp-block-group-inline-css'>
@@ -76,9 +76,6 @@ ol,ul{box-sizing:border-box}:root :where(.wp-block-list.has-background){padding:
 </style>
 <style id='wp-block-columns-inline-css'>
 .wp-block-columns{align-items:normal!important;box-sizing:border-box;display:flex;flex-wrap:wrap!important}@media (min-width:782px){.wp-block-columns{flex-wrap:nowrap!important}}.wp-block-columns.are-vertically-aligned-top{align-items:flex-start}.wp-block-columns.are-vertically-aligned-center{align-items:center}.wp-block-columns.are-vertically-aligned-bottom{align-items:flex-end}@media (max-width:781px){.wp-block-columns:not(.is-not-stacked-on-mobile)>.wp-block-column{flex-basis:100%!important}}@media (min-width:782px){.wp-block-columns:not(.is-not-stacked-on-mobile)>.wp-block-column{flex-basis:0;flex-grow:1}.wp-block-columns:not(.is-not-stacked-on-mobile)>.wp-block-column[style*=flex-basis]{flex-grow:0}}.wp-block-columns.is-not-stacked-on-mobile{flex-wrap:nowrap!important}.wp-block-columns.is-not-stacked-on-mobile>.wp-block-column{flex-basis:0;flex-grow:1}.wp-block-columns.is-not-stacked-on-mobile>.wp-block-column[style*=flex-basis]{flex-grow:0}:where(.wp-block-columns){margin-bottom:1.75em}:where(.wp-block-columns.has-background){padding:1.25em 2.375em}.wp-block-column{flex-grow:1;min-width:0;overflow-wrap:break-word;word-break:break-word}.wp-block-column.is-vertically-aligned-top{align-self:flex-start}.wp-block-column.is-vertically-aligned-center{align-self:center}.wp-block-column.is-vertically-aligned-bottom{align-self:flex-end}.wp-block-column.is-vertically-aligned-stretch{align-self:stretch}.wp-block-column.is-vertically-aligned-bottom,.wp-block-column.is-vertically-aligned-center,.wp-block-column.is-vertically-aligned-top{width:100%}
-</style>
-<style id='wp-block-navigation-link-inline-css'>
-.wp-block-navigation .wp-block-navigation-item__label{overflow-wrap:break-word}.wp-block-navigation .wp-block-navigation-item__description{display:none}.link-ui-tools{border-top:1px solid #f0f0f0;padding:8px}.link-ui-block-inserter{padding-top:8px}.link-ui-block-inserter__back{margin-left:8px;text-transform:uppercase}
 </style>
 <style id='wp-emoji-styles-inline-css'>
 
@@ -201,7 +198,7 @@ ol,ul{box-sizing:border-box}:root :where(.wp-block-list.has-background){padding:
 							<div class="wp-block-navigation__responsive-container-content" 
 				data-wp-watch="callbacks.focusFirstElement"
 			 id="modal-1-content">
-								<ul class="wp-block-navigation__container is-responsive items-justified-right wp-block-navigation"><ul class="wp-block-page-list"><li class="wp-block-pages-list__item wp-block-navigation-item open-on-hover-click"><a class="wp-block-pages-list__item__link wp-block-navigation-item__content" href="/Assignment4/about/">ABOUT US</a></li><li class="wp-block-pages-list__item wp-block-navigation-item open-on-hover-click"><a class="wp-block-pages-list__item__link wp-block-navigation-item__content" href="/Assignment4/contact-us/">CONTACT US</a></li><li class="wp-block-pages-list__item wp-block-navigation-item open-on-hover-click"><a class="wp-block-pages-list__item__link wp-block-navigation-item__content" href="/Assignment4/best-videos/">EXPLORE</a></li></ul></ul>
+								<ul class="wp-block-navigation__container is-responsive items-justified-right wp-block-navigation"><li class=" wp-block-navigation-item wp-block-navigation-link"><a class="wp-block-navigation-item__content"  href="/about/"><span class="wp-block-navigation-item__label">ABOUT US</span></a></li><li class=" wp-block-navigation-item wp-block-navigation-link"><a class="wp-block-navigation-item__content"  href="/best-videos/"><span class="wp-block-navigation-item__label">EXPLORE</span></a></li><li class=" wp-block-navigation-item wp-block-navigation-link"><a class="wp-block-navigation-item__content"  href="/products/"><span class="wp-block-navigation-item__label">PRODUCTS</span></a></li><li class=" wp-block-navigation-item wp-block-navigation-link"><a class="wp-block-navigation-item__content"  href="/contact-us/"><span class="wp-block-navigation-item__label">CONTACT US</span></a></li></ul>
 							</div>
 						</div>
 					</div>
@@ -230,7 +227,7 @@ ol,ul{box-sizing:border-box}:root :where(.wp-block-list.has-background){padding:
 <h2 class="wp-block-post-title has-x-large-font-size"><a href="/Assignment4/understanding-your-maltese-shih-tzus-behavior-a-guide-for-happy-pups/" target="_self" >Understanding Your Maltese Shih Tzu&#8217;s Behavior: A Guide for Happy Pups</a></h2>
 
 <div class="entry-content alignfull wp-block-post-content has-medium-font-size has-global-padding is-layout-constrained wp-block-post-content-is-layout-constrained">
-<figure class="wp-block-image size-full"><img fetchpriority="high" decoding="async" width="1024" height="683" src="/Assignment4/wp-content/uploads/2025/03/image-5.png" alt="" class="wp-image-34" srcset="/Assignment4/wp-content/uploads/2025/03/image-5.png 1024w, /Assignment4/wp-content/uploads/2025/03/image-5-300x200.png 300w, /Assignment4/wp-content/uploads/2025/03/image-5-768x512.png 768w" sizes="(max-width: 1024px) 100vw, 1024px" /></figure>
+<figure class="wp-block-image size-full"><img fetchpriority="high" decoding="async" width="1024" height="683" src="/Assignment4/wp-content/uploads/2025/03/image-5.png" alt="Dog sitting on couch" class="wp-image-34" srcset="/Assignment4/wp-content/uploads/2025/03/image-5.png 1024w, /Assignment4/wp-content/uploads/2025/03/image-5-300x200.png 300w, /Assignment4/wp-content/uploads/2025/03/image-5-768x512.png 768w" sizes="(max-width: 1024px) 100vw, 1024px" /></figure>
 
 
 
@@ -302,7 +299,7 @@ ol,ul{box-sizing:border-box}:root :where(.wp-block-list.has-background){padding:
 <h2 class="wp-block-post-title has-x-large-font-size"><a href="/Assignment4/fun-activities-to-keep-your-maltese-shih-tzu-entertained/" target="_self" >Fun Activities to Keep Your Maltese Shih Tzu Entertained</a></h2>
 
 <div class="entry-content alignfull wp-block-post-content has-medium-font-size has-global-padding is-layout-constrained wp-block-post-content-is-layout-constrained">
-<figure class="wp-block-image size-large"><img decoding="async" width="1024" height="768" src="/Assignment4/wp-content/uploads/2025/03/image-4-1024x768.png" alt="" class="wp-image-31" srcset="/Assignment4/wp-content/uploads/2025/03/image-4-1024x768.png 1024w, /Assignment4/wp-content/uploads/2025/03/image-4-300x225.png 300w, /Assignment4/wp-content/uploads/2025/03/image-4-768x576.png 768w, /Assignment4/wp-content/uploads/2025/03/image-4-1536x1152.png 1536w, /Assignment4/wp-content/uploads/2025/03/image-4.png 1920w" sizes="(max-width: 1024px) 100vw, 1024px" /></figure>
+<figure class="wp-block-image size-large"><img decoding="async" width="1024" height="768" src="/Assignment4/wp-content/uploads/2025/03/image-4-1024x768.png" alt="Dog looking at the camera" class="wp-image-31" srcset="/Assignment4/wp-content/uploads/2025/03/image-4-1024x768.png 1024w, /Assignment4/wp-content/uploads/2025/03/image-4-300x225.png 300w, /Assignment4/wp-content/uploads/2025/03/image-4-768x576.png 768w, /Assignment4/wp-content/uploads/2025/03/image-4-1536x1152.png 1536w, /Assignment4/wp-content/uploads/2025/03/image-4.png 1920w" sizes="(max-width: 1024px) 100vw, 1024px" /></figure>
 
 
 
@@ -366,7 +363,7 @@ ol,ul{box-sizing:border-box}:root :where(.wp-block-list.has-background){padding:
 <h2 class="wp-block-post-title has-x-large-font-size"><a href="/Assignment4/training-tips-for-a-well-behaved-maltese-shih-tzu/" target="_self" >Training Tips for a Well-Behaved Maltese Shih Tzu</a></h2>
 
 <div class="entry-content alignfull wp-block-post-content has-medium-font-size has-global-padding is-layout-constrained wp-block-post-content-is-layout-constrained">
-<figure class="wp-block-image size-large"><img decoding="async" width="1024" height="1024" src="/Assignment4/wp-content/uploads/2025/03/image-3-1024x1024.png" alt="" class="wp-image-28" srcset="/Assignment4/wp-content/uploads/2025/03/image-3-1024x1024.png 1024w, /Assignment4/wp-content/uploads/2025/03/image-3-300x300.png 300w, /Assignment4/wp-content/uploads/2025/03/image-3-150x150.png 150w, /Assignment4/wp-content/uploads/2025/03/image-3-768x768.png 768w, /Assignment4/wp-content/uploads/2025/03/image-3.png 1080w" sizes="(max-width: 1024px) 100vw, 1024px" /></figure>
+<figure class="wp-block-image size-large"><img decoding="async" width="1024" height="1024" src="/Assignment4/wp-content/uploads/2025/03/image-3-1024x1024.png" alt="Puppy facing camera" class="wp-image-28" srcset="/Assignment4/wp-content/uploads/2025/03/image-3-1024x1024.png 1024w, /Assignment4/wp-content/uploads/2025/03/image-3-300x300.png 300w, /Assignment4/wp-content/uploads/2025/03/image-3-150x150.png 150w, /Assignment4/wp-content/uploads/2025/03/image-3-768x768.png 768w, /Assignment4/wp-content/uploads/2025/03/image-3.png 1080w" sizes="(max-width: 1024px) 100vw, 1024px" /></figure>
 
 
 
@@ -434,7 +431,7 @@ ol,ul{box-sizing:border-box}:root :where(.wp-block-list.has-background){padding:
 <h2 class="wp-block-post-title has-x-large-font-size"><a href="/Assignment4/the-ultimate-guide-to-grooming-your-maltese-shih-tzu/" target="_self" >The Ultimate Guide to Grooming Your Maltese Shih Tzu</a></h2>
 
 <div class="entry-content alignfull wp-block-post-content has-medium-font-size has-global-padding is-layout-constrained wp-block-post-content-is-layout-constrained">
-<figure class="wp-block-image size-large"><img loading="lazy" decoding="async" width="1024" height="576" src="/Assignment4/wp-content/uploads/2025/03/image-2-1024x576.png" alt="" class="wp-image-25" srcset="/Assignment4/wp-content/uploads/2025/03/image-2-1024x576.png 1024w, /Assignment4/wp-content/uploads/2025/03/image-2-300x169.png 300w, /Assignment4/wp-content/uploads/2025/03/image-2-768x432.png 768w, /Assignment4/wp-content/uploads/2025/03/image-2.png 1280w" sizes="auto, (max-width: 1024px) 100vw, 1024px" /></figure>
+<figure class="wp-block-image size-large"><img loading="lazy" decoding="async" width="1024" height="576" src="/Assignment4/wp-content/uploads/2025/03/image-2-1024x576.png" alt="White dog standing on grooming table while leashed" class="wp-image-25" srcset="/Assignment4/wp-content/uploads/2025/03/image-2-1024x576.png 1024w, /Assignment4/wp-content/uploads/2025/03/image-2-300x169.png 300w, /Assignment4/wp-content/uploads/2025/03/image-2-768x432.png 768w, /Assignment4/wp-content/uploads/2025/03/image-2.png 1280w" sizes="auto, (max-width: 1024px) 100vw, 1024px" /></figure>
 
 
 
@@ -526,7 +523,7 @@ ol,ul{box-sizing:border-box}:root :where(.wp-block-list.has-background){padding:
 <h2 class="wp-block-post-title has-x-large-font-size"><a href="/Assignment4/best-food-to-feed-your-maltese-shih-tzu/" target="_self" >Best Food to Feed Your Maltese Shih Tzu</a></h2>
 
 <div class="entry-content alignfull wp-block-post-content has-medium-font-size has-global-padding is-layout-constrained wp-block-post-content-is-layout-constrained">
-<figure class="wp-block-image size-large"><img loading="lazy" decoding="async" width="1024" height="576" src="/Assignment4/wp-content/uploads/2025/03/image-1-1024x576.png" alt="" class="wp-image-20" srcset="/Assignment4/wp-content/uploads/2025/03/image-1-1024x576.png 1024w, /Assignment4/wp-content/uploads/2025/03/image-1-300x169.png 300w, /Assignment4/wp-content/uploads/2025/03/image-1-768x432.png 768w, /Assignment4/wp-content/uploads/2025/03/image-1.png 1280w" sizes="auto, (max-width: 1024px) 100vw, 1024px" /></figure>
+<figure class="wp-block-image size-large"><img loading="lazy" decoding="async" width="1024" height="576" src="/Assignment4/wp-content/uploads/2025/03/image-1-1024x576.png" alt="Dog outside with &quot;best foods&quot;" class="wp-image-20" srcset="/Assignment4/wp-content/uploads/2025/03/image-1-1024x576.png 1024w, /Assignment4/wp-content/uploads/2025/03/image-1-300x169.png 300w, /Assignment4/wp-content/uploads/2025/03/image-1-768x432.png 768w, /Assignment4/wp-content/uploads/2025/03/image-1.png 1280w" sizes="auto, (max-width: 1024px) 100vw, 1024px" /></figure>
 
 
 

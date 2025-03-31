@@ -10,3 +10,241 @@
 [31-Mar-2025 22:04:34 UTC] PHP Fatal error:  Out of memory (allocated 31457280) (tried to allocate 4096 bytes) in /workspaces/Assignment4/.wordpress/wp-includes/class-wp-theme-json.php on line 4240
 [31-Mar-2025 22:04:34 UTC] PHP Fatal error:  Out of memory (allocated 31457280) (tried to allocate 4096 bytes) in /workspaces/Assignment4/.wordpress/wp-includes/functions.php on line 4946
 [31-Mar-2025 22:05:04 UTC] PHP Fatal error:  Out of memory (allocated 31457280) (tried to allocate 2097152 bytes) in /workspaces/Assignment4/.wordpress/wp-includes/class-wp-admin-bar.php on line 473
+[31-Mar-2025 22:27:14 UTC] WordPress database error <div style="clear:both">&nbsp;</div>
+<div class="queries" style="clear:both;margin-bottom:2px;border:red dotted thin;">
+<p>MySQL query:</p>
+<p>DELETE synch.*
+		      FROM wp_blc_synch AS synch
+		      WHERE
+	      	    synch.container_type NOT IN ('comment', 'post', 'page', 'dummy')</p>
+<p>Queries made or created this session were:</p>
+<ol>
+<li>Executing: BEGIN | (no parameters)</li>
+<li>Executing: DELETE synch.*
+		      FROM wp_blc_synch AS synch
+		      WHERE
+	      	    synch.container_type NOT IN (:param0 , :param1 , :param2 , :param3 ) | parameters: comment, post, page, dummy</li>
+<li>Executing: ROLLBACK | (no parameters)</li>
+</ol>
+</div>
+<div style="clear:both;margin-bottom:2px;border:red dotted thin;" class="error_message" style="border-bottom:dotted blue thin;">
+Error occurred at line 4117 in Function <code>handle_error</code>. Error message was: SQLSTATE[HY000]: General error: 1 near "synch": syntax error.
+</div>
+<p>Backtrace:</p>
+<pre>#0 /workspaces/Assignment4/.wordpress/wp-content/mu-plugins/sqlite-database-integration/wp-includes/sqlite/class-wp-sqlite-db.php(287): WP_SQLite_Translator->get_error_message()
+#1 /workspaces/Assignment4/.wordpress/wp-content/plugins/broken-link-checker/legacy/includes/containers.php(915): WP_SQLite_DB->query('DELETE synch.*\n...')
+#2 /workspaces/Assignment4/.wordpress/wp-content/plugins/broken-link-checker/legacy/init.php(223): blcContainerHelper::cleanup_containers()
+#3 /workspaces/Assignment4/.wordpress/wp-content/plugins/broken-link-checker/legacy/includes/activation.php(75): blc_cleanup_database()
+#4 /workspaces/Assignment4/.wordpress/wp-content/plugins/broken-link-checker/legacy/init.php(277): require('/workspaces/Ass...')
+#5 /workspaces/Assignment4/.wordpress/wp-content/plugins/broken-link-checker/broken-link-checker.php(151): require('/workspaces/Ass...')
+#6 /workspaces/Assignment4/.wordpress/wp-includes/class-wp-hook.php(324): WPMUDEV_BLC\{closure}('')
+#7 /workspaces/Assignment4/.wordpress/wp-includes/class-wp-hook.php(348): WP_Hook->apply_filters(Object(WPMUDEV_BLC\Core\Loader), Array)
+#8 /workspaces/Assignment4/.wordpress/wp-includes/plugin.php(517): WP_Hook->do_action(Array)
+#9 /workspaces/Assignment4/.wordpress/wp-settings.php(559): do_action('plugins_loaded')
+#10 /workspaces/Assignment4/.wordpress/wp-config.php(107): require_once('/workspaces/Ass...')
+#11 /workspaces/Assignment4/.wordpress/wp-load.php(50): require_once('/workspaces/Ass...')
+#12 /workspaces/Assignment4/.wordpress/wp-admin/admin.php(34): require_once('/workspaces/Ass...')
+#13 /workspaces/Assignment4/.wordpress/wp-admin/plugins.php(10): require_once('/workspaces/Ass...')
+#14 {main}</pre>
+ for query DELETE synch.*
+		      FROM wp_blc_synch AS synch
+		      WHERE
+	      	    synch.container_type NOT IN ('comment', 'post', 'page', 'dummy') made by require_once('wp-admin/admin.php'), require_once('wp-load.php'), require_once('wp-config.php'), require_once('wp-settings.php'), do_action('plugins_loaded'), WP_Hook->do_action, WP_Hook->apply_filters, WPMUDEV_BLC\{closure}, require('/plugins/broken-link-checker/legacy/init.php'), require('/plugins/broken-link-checker/legacy/includes/activation.php'), blc_cleanup_database, blcContainerHelper::cleanup_containers, WP_SQLite_DB->query, WP_SQLite_DB->print_error
+[31-Mar-2025 22:27:14 UTC] WordPress database error <div style="clear:both">&nbsp;</div>
+<div class="queries" style="clear:both;margin-bottom:2px;border:red dotted thin;">
+<p>MySQL query:</p>
+<p>DELETE instances.*
+	      FROM wp_blc_instances AS instances
+	      WHERE
+	        instances.container_type NOT IN ('comment', 'post', 'page', 'dummy') OR
+	        instances.parser_type NOT IN ('link', 'image', 'youtube-iframe', 'metadata', 'url_field', 'acf')</p>
+<p>Queries made or created this session were:</p>
+<ol>
+<li>Executing: BEGIN | (no parameters)</li>
+<li>Executing: DELETE instances.*
+	      FROM wp_blc_instances AS instances
+	      WHERE
+	        instances.container_type NOT IN (:param0 , :param1 , :param2 , :param3 ) OR
+	        instances.parser_type NOT IN (:param4 , :param5 , :param6 , :param7 , :param8 , :param9 ) | parameters: comment, post, page, dummy, link, image, youtube-iframe, metadata, url_field, acf</li>
+<li>Executing: ROLLBACK | (no parameters)</li>
+</ol>
+</div>
+<div style="clear:both;margin-bottom:2px;border:red dotted thin;" class="error_message" style="border-bottom:dotted blue thin;">
+Error occurred at line 4117 in Function <code>handle_error</code>. Error message was: SQLSTATE[HY000]: General error: 1 near "instances": syntax error.
+</div>
+<p>Backtrace:</p>
+<pre>#0 /workspaces/Assignment4/.wordpress/wp-content/mu-plugins/sqlite-database-integration/wp-includes/sqlite/class-wp-sqlite-db.php(287): WP_SQLite_Translator->get_error_message()
+#1 /workspaces/Assignment4/.wordpress/wp-content/plugins/broken-link-checker/legacy/includes/instances.php(626): WP_SQLite_DB->query('DELETE instance...')
+#2 /workspaces/Assignment4/.wordpress/wp-content/plugins/broken-link-checker/legacy/init.php(227): blc_cleanup_instances()
+#3 /workspaces/Assignment4/.wordpress/wp-content/plugins/broken-link-checker/legacy/includes/activation.php(75): blc_cleanup_database()
+#4 /workspaces/Assignment4/.wordpress/wp-content/plugins/broken-link-checker/legacy/init.php(277): require('/workspaces/Ass...')
+#5 /workspaces/Assignment4/.wordpress/wp-content/plugins/broken-link-checker/broken-link-checker.php(151): require('/workspaces/Ass...')
+#6 /workspaces/Assignment4/.wordpress/wp-includes/class-wp-hook.php(324): WPMUDEV_BLC\{closure}('')
+#7 /workspaces/Assignment4/.wordpress/wp-includes/class-wp-hook.php(348): WP_Hook->apply_filters(Object(WPMUDEV_BLC\Core\Loader), Array)
+#8 /workspaces/Assignment4/.wordpress/wp-includes/plugin.php(517): WP_Hook->do_action(Array)
+#9 /workspaces/Assignment4/.wordpress/wp-settings.php(559): do_action('plugins_loaded')
+#10 /workspaces/Assignment4/.wordpress/wp-config.php(107): require_once('/workspaces/Ass...')
+#11 /workspaces/Assignment4/.wordpress/wp-load.php(50): require_once('/workspaces/Ass...')
+#12 /workspaces/Assignment4/.wordpress/wp-admin/admin.php(34): require_once('/workspaces/Ass...')
+#13 /workspaces/Assignment4/.wordpress/wp-admin/plugins.php(10): require_once('/workspaces/Ass...')
+#14 {main}</pre>
+ for query DELETE instances.*
+	      FROM wp_blc_instances AS instances
+	      WHERE
+	        instances.container_type NOT IN ('comment', 'post', 'page', 'dummy') OR
+	        instances.parser_type NOT IN ('link', 'image', 'youtube-iframe', 'metadata', 'url_field', 'acf') made by require_once('wp-admin/admin.php'), require_once('wp-load.php'), require_once('wp-config.php'), require_once('wp-settings.php'), do_action('plugins_loaded'), WP_Hook->do_action, WP_Hook->apply_filters, WPMUDEV_BLC\{closure}, require('/plugins/broken-link-checker/legacy/init.php'), require('/plugins/broken-link-checker/legacy/includes/activation.php'), blc_cleanup_database, blc_cleanup_instances, WP_SQLite_DB->query, WP_SQLite_DB->print_error
+[31-Mar-2025 22:27:14 UTC] WordPress database error <div style="clear:both">&nbsp;</div>
+<div class="queries" style="clear:both;margin-bottom:2px;border:red dotted thin;">
+<p>MySQL query:</p>
+<p>DELETE synch.* FROM wp_blc_synch AS synch WHERE synch.container_id NOT IN ('64', '46', '36', '33', '30', '27', '24', '19', '13')</p>
+<p>Queries made or created this session were:</p>
+<ol>
+<li>Executing: BEGIN | (no parameters)</li>
+<li>Executing: DELETE synch.* FROM wp_blc_synch AS synch WHERE synch.container_id NOT IN (:param0 , :param1 , :param2 , :param3 , :param4 , :param5 , :param6 , :param7 , :param8 ) | parameters: 64, 46, 36, 33, 30, 27, 24, 19, 13</li>
+<li>Executing: ROLLBACK | (no parameters)</li>
+</ol>
+</div>
+<div style="clear:both;margin-bottom:2px;border:red dotted thin;" class="error_message" style="border-bottom:dotted blue thin;">
+Error occurred at line 4117 in Function <code>handle_error</code>. Error message was: SQLSTATE[HY000]: General error: 1 near "synch": syntax error.
+</div>
+<p>Backtrace:</p>
+<pre>#0 /workspaces/Assignment4/.wordpress/wp-content/mu-plugins/sqlite-database-integration/wp-includes/sqlite/class-wp-sqlite-db.php(287): WP_SQLite_Translator->get_error_message()
+#1 /workspaces/Assignment4/.wordpress/wp-content/plugins/broken-link-checker/legacy/includes/any-post.php(271): WP_SQLite_DB->query('DELETE synch.* ...')
+#2 /workspaces/Assignment4/.wordpress/wp-content/plugins/broken-link-checker/legacy/includes/any-post.php(808): blcPostTypeOverlord->resynch('post', false)
+#3 /workspaces/Assignment4/.wordpress/wp-content/plugins/broken-link-checker/legacy/includes/containers.php(102): blcAnyPostContainerManager->resynch()
+#4 /workspaces/Assignment4/.wordpress/wp-content/plugins/broken-link-checker/legacy/includes/module-base.php(77): blcContainerManager->activated()
+#5 /workspaces/Assignment4/.wordpress/wp-content/plugins/broken-link-checker/legacy/includes/module-manager.php(502): blcModule->plugin_activated()
+#6 /workspaces/Assignment4/.wordpress/wp-content/plugins/broken-link-checker/legacy/includes/activation.php(82): blcModuleManager->plugin_activated()
+#7 /workspaces/Assignment4/.wordpress/wp-content/plugins/broken-link-checker/legacy/init.php(277): require('/workspaces/Ass...')
+#8 /workspaces/Assignment4/.wordpress/wp-content/plugins/broken-link-checker/broken-link-checker.php(151): require('/workspaces/Ass...')
+#9 /workspaces/Assignment4/.wordpress/wp-includes/class-wp-hook.php(324): WPMUDEV_BLC\{closure}('')
+#10 /workspaces/Assignment4/.wordpress/wp-includes/class-wp-hook.php(348): WP_Hook->apply_filters(Object(WPMUDEV_BLC\Core\Loader), Array)
+#11 /workspaces/Assignment4/.wordpress/wp-includes/plugin.php(517): WP_Hook->do_action(Array)
+#12 /workspaces/Assignment4/.wordpress/wp-settings.php(559): do_action('plugins_loaded')
+#13 /workspaces/Assignment4/.wordpress/wp-config.php(107): require_once('/workspaces/Ass...')
+#14 /workspaces/Assignment4/.wordpress/wp-load.php(50): require_once('/workspaces/Ass...')
+#15 /workspaces/Assignment4/.wordpress/wp-admin/admin.php(34): require_once('/workspaces/Ass...')
+#16 /workspaces/Assignment4/.wordpress/wp-admin/plugins.php(10): require_once('/workspaces/Ass...')
+#17 {main}</pre>
+ for query DELETE synch.* FROM wp_blc_synch AS synch WHERE synch.container_id NOT IN ('64', '46', '36', '33', '30', '27', '24', '19', '13') made by require_once('wp-admin/admin.php'), require_once('wp-load.php'), require_once('wp-config.php'), require_once('wp-settings.php'), do_action('plugins_loaded'), WP_Hook->do_action, WP_Hook->apply_filters, WPMUDEV_BLC\{closure}, require('/plugins/broken-link-checker/legacy/init.php'), require('/plugins/broken-link-checker/legacy/includes/activation.php'), blcModuleManager->plugin_activated, blcModule->plugin_activated, blcContainerManager->activated, blcAnyPostContainerManager->resynch, blcPostTypeOverlord->resynch, WP_SQLite_DB->query, WP_SQLite_DB->print_error
+[31-Mar-2025 22:27:14 UTC] WordPress database error <div style="clear:both">&nbsp;</div>
+<div class="queries" style="clear:both;margin-bottom:2px;border:red dotted thin;">
+<p>MySQL query:</p>
+<p>UPDATE
+					wp_blc_synch AS synch
+					JOIN wp_posts AS posts ON (synch.container_id = posts.ID and synch.container_type=posts.post_type)
+				  SET
+					synched = 0
+				  WHERE
+					synch.last_synch < posts.post_modified</p>
+<p>Queries made or created this session were:</p>
+<ol>
+<li>Executing: BEGIN | (no parameters)</li>
+<li>Executing: UPDATE
+					wp_blc_synch AS synch
+					JOIN wp_posts AS posts ON (synch.container_id = posts.ID and synch.container_type=posts.post_type)
+				  SET
+					synched = 0
+				  WHERE rowid IN (SELECT rowid FROM wp_blc_synch WHERE
+					synch.last_synch &lt; posts.post_modified) | (no parameters)</li>
+<li>Executing: ROLLBACK | (no parameters)</li>
+</ol>
+</div>
+<div style="clear:both;margin-bottom:2px;border:red dotted thin;" class="error_message" style="border-bottom:dotted blue thin;">
+Error occurred at line 4117 in Function <code>handle_error</code>. Error message was: SQLSTATE[HY000]: General error: 1 near "JOIN": syntax error.
+</div>
+<p>Backtrace:</p>
+<pre>#0 /workspaces/Assignment4/.wordpress/wp-content/mu-plugins/sqlite-database-integration/wp-includes/sqlite/class-wp-sqlite-db.php(287): WP_SQLite_Translator->get_error_message()
+#1 /workspaces/Assignment4/.wordpress/wp-content/plugins/broken-link-checker/legacy/includes/any-post.php(314): WP_SQLite_DB->query('UPDATE\n\t\t\t\t\twp_...')
+#2 /workspaces/Assignment4/.wordpress/wp-content/plugins/broken-link-checker/legacy/includes/any-post.php(808): blcPostTypeOverlord->resynch('post', false)
+#3 /workspaces/Assignment4/.wordpress/wp-content/plugins/broken-link-checker/legacy/includes/containers.php(102): blcAnyPostContainerManager->resynch()
+#4 /workspaces/Assignment4/.wordpress/wp-content/plugins/broken-link-checker/legacy/includes/module-base.php(77): blcContainerManager->activated()
+#5 /workspaces/Assignment4/.wordpress/wp-content/plugins/broken-link-checker/legacy/includes/module-manager.php(502): blcModule->plugin_activated()
+#6 /workspaces/Assignment4/.wordpress/wp-content/plugins/broken-link-checker/legacy/includes/activation.php(82): blcModuleManager->plugin_activated()
+#7 /workspaces/Assignment4/.wordpress/wp-content/plugins/broken-link-checker/legacy/init.php(277): require('/workspaces/Ass...')
+#8 /workspaces/Assignment4/.wordpress/wp-content/plugins/broken-link-checker/broken-link-checker.php(151): require('/workspaces/Ass...')
+#9 /workspaces/Assignment4/.wordpress/wp-includes/class-wp-hook.php(324): WPMUDEV_BLC\{closure}('')
+#10 /workspaces/Assignment4/.wordpress/wp-includes/class-wp-hook.php(348): WP_Hook->apply_filters(Object(WPMUDEV_BLC\Core\Loader), Array)
+#11 /workspaces/Assignment4/.wordpress/wp-includes/plugin.php(517): WP_Hook->do_action(Array)
+#12 /workspaces/Assignment4/.wordpress/wp-settings.php(559): do_action('plugins_loaded')
+#13 /workspaces/Assignment4/.wordpress/wp-config.php(107): require_once('/workspaces/Ass...')
+#14 /workspaces/Assignment4/.wordpress/wp-load.php(50): require_once('/workspaces/Ass...')
+#15 /workspaces/Assignment4/.wordpress/wp-admin/admin.php(34): require_once('/workspaces/Ass...')
+#16 /workspaces/Assignment4/.wordpress/wp-admin/plugins.php(10): require_once('/workspaces/Ass...')
+#17 {main}</pre>
+ for query UPDATE
+					wp_blc_synch AS synch
+					JOIN wp_posts AS posts ON (synch.container_id = posts.ID and synch.container_type=posts.post_type)
+				  SET
+					synched = 0
+				  WHERE
+					synch.last_synch < posts.post_modified made by require_once('wp-admin/admin.php'), require_once('wp-load.php'), require_once('wp-config.php'), require_once('wp-settings.php'), do_action('plugins_loaded'), WP_Hook->do_action, WP_Hook->apply_filters, WPMUDEV_BLC\{closure}, require('/plugins/broken-link-checker/legacy/init.php'), require('/plugins/broken-link-checker/legacy/includes/activation.php'), blcModuleManager->plugin_activated, blcModule->plugin_activated, blcContainerManager->activated, blcAnyPostContainerManager->resynch, blcPostTypeOverlord->resynch, WP_SQLite_DB->query, WP_SQLite_DB->print_error
+[31-Mar-2025 22:27:15 UTC] WordPress database error <div style="clear:both">&nbsp;</div>
+<div class="queries" style="clear:both;margin-bottom:2px;border:red dotted thin;">
+<p>MySQL query:</p>
+<p>DELETE synch.*
+		      FROM wp_blc_synch AS synch
+		      WHERE
+	      	    synch.container_type NOT IN ('comment', 'post', 'page', 'dummy')</p>
+<p>Queries made or created this session were:</p>
+<ol>
+<li>Executing: BEGIN | (no parameters)</li>
+<li>Executing: DELETE synch.*
+		      FROM wp_blc_synch AS synch
+		      WHERE
+	      	    synch.container_type NOT IN (:param0 , :param1 , :param2 , :param3 ) | parameters: comment, post, page, dummy</li>
+<li>Executing: ROLLBACK | (no parameters)</li>
+</ol>
+</div>
+<div style="clear:both;margin-bottom:2px;border:red dotted thin;" class="error_message" style="border-bottom:dotted blue thin;">
+Error occurred at line 4117 in Function <code>handle_error</code>. Error message was: SQLSTATE[HY000]: General error: 1 near "synch": syntax error.
+</div>
+<p>Backtrace:</p>
+<pre>#0 /workspaces/Assignment4/.wordpress/wp-content/mu-plugins/sqlite-database-integration/wp-includes/sqlite/class-wp-sqlite-db.php(287): WP_SQLite_Translator->get_error_message()
+#1 /workspaces/Assignment4/.wordpress/wp-content/plugins/broken-link-checker/legacy/includes/containers.php(915): WP_SQLite_DB->query('DELETE synch.*\n...')
+#2 /workspaces/Assignment4/.wordpress/wp-content/plugins/broken-link-checker/legacy/core/core.php(390): blcContainerHelper::cleanup_containers()
+#3 /workspaces/Assignment4/.wordpress/wp-includes/class-wp-hook.php(324): wsBrokenLinkChecker->database_maintenance()
+#4 /workspaces/Assignment4/.wordpress/wp-includes/class-wp-hook.php(348): WP_Hook->apply_filters('', Array)
+#5 /workspaces/Assignment4/.wordpress/wp-includes/plugin.php(565): WP_Hook->do_action(Array)
+#6 /workspaces/Assignment4/.wordpress/wp-cron.php(191): do_action_ref_array('blc_cron_databa...', Array)
+#7 {main}</pre>
+ for query DELETE synch.*
+		      FROM wp_blc_synch AS synch
+		      WHERE
+	      	    synch.container_type NOT IN ('comment', 'post', 'page', 'dummy') made by do_action_ref_array('blc_cron_database_maintenance'), WP_Hook->do_action, WP_Hook->apply_filters, wsBrokenLinkChecker->database_maintenance, blcContainerHelper::cleanup_containers, WP_SQLite_DB->query, WP_SQLite_DB->print_error
+[31-Mar-2025 22:27:15 UTC] WordPress database error <div style="clear:both">&nbsp;</div>
+<div class="queries" style="clear:both;margin-bottom:2px;border:red dotted thin;">
+<p>MySQL query:</p>
+<p>DELETE instances.*
+	      FROM wp_blc_instances AS instances
+	      WHERE
+	        instances.container_type NOT IN ('comment', 'post', 'page', 'dummy') OR
+	        instances.parser_type NOT IN ('link', 'image', 'youtube-iframe', 'metadata', 'url_field', 'acf')</p>
+<p>Queries made or created this session were:</p>
+<ol>
+<li>Executing: BEGIN | (no parameters)</li>
+<li>Executing: DELETE instances.*
+	      FROM wp_blc_instances AS instances
+	      WHERE
+	        instances.container_type NOT IN (:param0 , :param1 , :param2 , :param3 ) OR
+	        instances.parser_type NOT IN (:param4 , :param5 , :param6 , :param7 , :param8 , :param9 ) | parameters: comment, post, page, dummy, link, image, youtube-iframe, metadata, url_field, acf</li>
+<li>Executing: ROLLBACK | (no parameters)</li>
+</ol>
+</div>
+<div style="clear:both;margin-bottom:2px;border:red dotted thin;" class="error_message" style="border-bottom:dotted blue thin;">
+Error occurred at line 4117 in Function <code>handle_error</code>. Error message was: SQLSTATE[HY000]: General error: 1 near "instances": syntax error.
+</div>
+<p>Backtrace:</p>
+<pre>#0 /workspaces/Assignment4/.wordpress/wp-content/mu-plugins/sqlite-database-integration/wp-includes/sqlite/class-wp-sqlite-db.php(287): WP_SQLite_Translator->get_error_message()
+#1 /workspaces/Assignment4/.wordpress/wp-content/plugins/broken-link-checker/legacy/includes/instances.php(626): WP_SQLite_DB->query('DELETE instance...')
+#2 /workspaces/Assignment4/.wordpress/wp-content/plugins/broken-link-checker/legacy/core/core.php(391): blc_cleanup_instances()
+#3 /workspaces/Assignment4/.wordpress/wp-includes/class-wp-hook.php(324): wsBrokenLinkChecker->database_maintenance()
+#4 /workspaces/Assignment4/.wordpress/wp-includes/class-wp-hook.php(348): WP_Hook->apply_filters('', Array)
+#5 /workspaces/Assignment4/.wordpress/wp-includes/plugin.php(565): WP_Hook->do_action(Array)
+#6 /workspaces/Assignment4/.wordpress/wp-cron.php(191): do_action_ref_array('blc_cron_databa...', Array)
+#7 {main}</pre>
+ for query DELETE instances.*
+	      FROM wp_blc_instances AS instances
+	      WHERE
+	        instances.container_type NOT IN ('comment', 'post', 'page', 'dummy') OR
+	        instances.parser_type NOT IN ('link', 'image', 'youtube-iframe', 'metadata', 'url_field', 'acf') made by do_action_ref_array('blc_cron_database_maintenance'), WP_Hook->do_action, WP_Hook->apply_filters, wsBrokenLinkChecker->database_maintenance, blc_cleanup_instances, WP_SQLite_DB->query, WP_SQLite_DB->print_error

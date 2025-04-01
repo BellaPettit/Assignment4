@@ -382,3 +382,21 @@ Stack trace:
 #16 {main}
   thrown in /workspaces/Assignment4/.wordpress/wp-includes/media.php on line 4230
 [31-Mar-2025 23:03:57 UTC] PHP Fatal error:  Out of memory (allocated 31457280) (tried to allocate 2097152 bytes) in /workspaces/Assignment4/.wordpress/wp-admin/includes/ajax-actions.php on line 4019
+[01-Apr-2025 00:21:00 UTC] PHP Warning:  require_once(/workspaces/Assignment4/.wordpress/wp-includes/class-wp-image-editor-gd.php): Failed to open stream: No such file or directory in /workspaces/Assignment4/.wordpress/wp-includes/media.php on line 4230
+[01-Apr-2025 00:21:00 UTC] PHP Fatal error:  Uncaught Error: Failed opening required '/workspaces/Assignment4/.wordpress/wp-includes/class-wp-image-editor-gd.php' (include_path='.:') in /workspaces/Assignment4/.wordpress/wp-includes/media.php:4230
+Stack trace:
+#0 /workspaces/Assignment4/.wordpress/wp-includes/media.php(4215): _wp_image_editor_choose(Array)
+#1 /workspaces/Assignment4/.wordpress/wp-includes/media.php(4353): wp_image_editor_supports(Array)
+#2 /workspaces/Assignment4/.wordpress/wp-includes/media.php(5092): wp_plupload_default_settings()
+#3 /workspaces/Assignment4/.wordpress/wp-admin/options-general.php(105): wp_enqueue_media()
+#4 {main}
+  thrown in /workspaces/Assignment4/.wordpress/wp-includes/media.php on line 4230
+[01-Apr-2025 00:21:21 UTC] PHP Warning:  require_once(/workspaces/Assignment4/.wordpress/wp-includes/class-wp-image-editor-gd.php): Failed to open stream: No such file or directory in /workspaces/Assignment4/.wordpress/wp-includes/media.php on line 4230
+[01-Apr-2025 00:21:21 UTC] PHP Fatal error:  Uncaught Error: Failed opening required '/workspaces/Assignment4/.wordpress/wp-includes/class-wp-image-editor-gd.php' (include_path='.:') in /workspaces/Assignment4/.wordpress/wp-includes/media.php:4230
+Stack trace:
+#0 /workspaces/Assignment4/.wordpress/wp-includes/media.php(4215): _wp_image_editor_choose(Array)
+#1 /workspaces/Assignment4/.wordpress/wp-includes/media.php(4353): wp_image_editor_supports(Array)
+#2 /workspaces/Assignment4/.wordpress/wp-includes/media.php(5092): wp_plupload_default_settings()
+#3 /workspaces/Assignment4/.wordpress/wp-admin/site-editor.php(167): wp_enqueue_media()
+#4 {main}
+  thrown in /workspaces/Assignment4/.wordpress/wp-includes/media.php on line 4230
